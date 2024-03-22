@@ -1,0 +1,107 @@
+html{
+    min-width: 600px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 10px;
+    background-color: #ffffff;
+}
+
+nav {
+    z-index: 100;
+
+    display:  flex;
+    justify-content: center;
+    gap: 10%;
+
+    position: fixed;
+
+    width: 100%;
+    left: 0%;
+    top: 0%;
+    
+     background-color: rgb(239, 218, 82);
+    color: white;
+    padding: 10px;
+    margin: 0%;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 40px;
+}
+
+a:hover {
+    font-size: 60px;
+}
+
+.Welcome {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20vh;
+    height: 100vh;
+    align-content: center;
+    justify-content: center;
+    
+    
+}
+
+@keyframes FadeInAnim {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.TopText {
+    font-size: 80px;
+    text-align: center;
+
+    animation: FadeInAnim ease 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.TopImage {
+    height: 50%;
+}
+
+.ImageGrid {
+    background-image: linear-gradient(to bottom, white 60% , rgb(239, 218, 82));
+    position: relative;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    padding: 16px 10% 16px 10%;
+}
+
+.ImagesInGrid {
+    /* max-width: 100%;
+    */
+    max-width: 100%;
+    max-height: auto;
+    aspect-ratio: 16/9;
+    border-radius: 10px;
+    outline: solid;
+    border-color: black;
+
+}
+
+.ImagesInGrid:hover {
+    transform: scale(1.5);
+}
+
+@media screen and (max-width: 600px) {
+    .ImageGrid {
+        grid-template-columns: auto;
+    }
+
+    .ImagesInGrid:hover {
+        transform: scale(1.1);
+    }
+}
